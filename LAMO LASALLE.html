@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<style>
+
+:root {
+    --white: #fff;
+    --text: hsl(0, 0%, 30%);
+    --pale: hsl(28, 17%, 85%);
+    --green: hsl(157, 77%, 23%);
+    --green2:rgb(30, 68, 53);
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: var(--pale);
+}
+
+#header-img {
+    height: auto;
+    width: 40px;
+    object-fit: contain;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--white);
+    padding: 10px;
+
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 5px;
+
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 0 10px;
+
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+
+.the-product {
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: 700;
+    line-height: 2em;
+    font-family: "montserrat";
+    align-items: center;
+    vertical-align: top;
+}
+
+#email-section {
+    margin-top: 100px;
+}
+
+input {
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid var(--green);
+}
+
+#submit {
+    background-color: var(--green);
+    color: #fff;
+    cursor: pointer;
+    font-size: 10px;
+    padding: 5.8px;
+}
+
+
+section::before {
+    display: block;
+    content: " ";
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
+    pointer-events: none;
+
+}
+
+section {
+    margin: 40px 20px;
+    text-align: center;
+}
+
+section h3 {
+    font-family: "montserrat";
+    margin: 12px 0px 5px 0px;
+}
+
+.icon {
+    color: var(--green);
+    margin-right: 20px;
+    margin-left: 20px;
+    align-items: center;
+}
+
+#features {
+    text-align: left;
+    max-width: 90%;
+    margin: auto;
+}
+
+.feature  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-family: "montserrat";
+
+}
+
+#audio iframe {
+    width: 100%; 
+    height: 50%; 
+}
+
+.product-image {
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    border: 1px solid var(--text);
+    border-radius: 10px 10px 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.product1 {
+    background-image: url("https://amiablefoods.com/wp-content/uploads/hong-kong-fried-noodles-top2-768x1024.jpg");
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+
+}
+
+.inner-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.content {
+    font-family: "montserrat";
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.main-price {
+    margin-right: 20px;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: var(--green);
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: var(--text)
+
+}
+
+.vendor {
+    font-family: "montserrat";
+    letter-spacing: 5px;
+    color: var(--text);
+    text-transform: uppercase;
+}
+
+.header {
+    font-family: sans-serif;
+    margin: 10px 0;
+    color: black;
+
+}
+
+#for_sale h2 {
+    padding: 30px;
+    color:rgb(87, 7, 7);
+    font-family: "montserrat";
+}
+/* 
+#for_sale {
+    display: flex;
+    margin: 10px;
+} */
+
+.add {
+    background-color: var(--green);
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    color: white;
+    font-family: "montserrat";
+    border-radius: 10px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#fires {
+    height: 20px;
+
+}
+
+
+
+
+@media only screen and (450px < width < 600px){
+    .card {
+        font-size: 0.85rem;
+    }
+
+    .product-image {
+        height: 400px;
+    }
+
+
+}
+
+
+@media only screen and (450px <= width ){
+    .card {
+        display: flex;
+        max-width: 525px;
+    }
+
+    .inner-card{
+        width: 300px;
+        padding: 20px;
+    }
+    .product-image {
+        width: 400px;
+        border-radius: 10px 0 0 10px;
+    }
+
+}
+@media only screen and (width >= 1000px){
+
+    #nav-bar {
+        flex-direction: row;
+        
+    }
+
+    .nav-links {
+        padding-right: 35px;
+    }
+
+    .logo-container {
+        padding-left: 35px;
+    }
+
+    .product-image {
+        width: 400px;
+        border-radius: 10px;
+        padding: 1px;
+    }
+
+    .inner-card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: auto;
+        
+    }
+
+    .card {
+        width: 405px;
+        margin: 10px;
+        display: inline-block; 
+        margin-right: 20px;
+
+    }
+
+    #features {
+
+        width: 100%;
+        padding: 20px;
+        
+
+    }
+
+}
+
+@media only screen and (width >= 1400px){
+
+
+#features {
+    display: flex;
+    width: 80%;
+    padding: 20px;
+}
+
+#features > .feature:not(:last-child) {
+    margin-right: 5%; /* Adjust the margin as needed */
+} */
+
+.icon {
+    color: var(--green);
+    margin-right: 30px;
+}
+
+
+.feature  {
+    flex-wrap: wrap;
+    text-align: center;
+    width: 300px;
+}
+
+
+}
+
+
+
+</style>
+<body>
+    <header id="header">
+        <nav id="nav-bar">
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/en/8/8c/DLSU-Dasmari%C3%B1as_Seal.png" 
+                alt="logo" id="header-img"/>
+                <span class="the-product">Lamon Lasalle!</span>
+            </div>    
+            <ul class="nav-links">
+                <li><a href="#foodsquare" class="nav-link">Food Square</a></li>
+                <li><a href="#cafemuseo" class="nav-link">Cafe Museo</a></li>
+                <li><a href="#milas" class="nav-link">Mila's</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="email-section">
+        <h3><i>Get up-to-date with the latest eateries!</i></h3>
+        <form action="https://www.freecodecano.com/email-submit" id="form">
+            <input type="email" required placeholder="Enter your email" name="email" id="email"/>
+            <input type="submit" id="submit" value="GET STARTED">
+        </form>
+    </section>
+
+    <section id="features">
+        <div class="feature">
+            <i class="ri-restaurant-fill ri-4x icon"></i>
+            <div>
+                <h3>Cuisine Corner: Where Flavor Meets Convenience!</h3>
+                <p>
+Indulge in a delectable array of culinary delights at our campus food section. From the savory goods in Kulpy Chicken, to the sweet drinks in Cafe Museo, the options are limitless!</p>
+            </div>
+        </div>
+        <div class="feature">
+            <i class="ri-drinks-fill ri-4x icon"></i>
+            <div>
+                <h3>
+                    Quench: Refresh and Recharge with Every Sip!
+                </h3>
+                <p>
+                    Stay refreshed with our Drinks Section! From energizing coffees to refreshing teas, we offer a variety of beverages to keep you hydrated and satisfied on campus.
+                </p>
+            </div>
+        </div>
+        <div class="feature">
+            <i class="ri-cake-3-fill ri-4x icon"></i>
+            <div>
+                <h3>
+                    Snack Shack: Your Go-To Spot for Tasty Treats!
+                </h3>
+                <p>
+                    Snack time just got a whole lot more exciting! Explore our snacks section for a tempting assortment of treats to keep those hunger pangs at bay. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="audio">
+   
+    <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/4X7r6DCOYNc?si=OrJQd-a-rwPqgiRf&amp;start=1301" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+
+    </section>
+
+    <section id="for_sale">
+        
+        <section id = "fire">
+        <h2>
+            <img id="fires" src="https://static-00.iconduck.com/assets.00/fire-emoji-402x512-8ma95d17.png">
+            Popular Now!
+            <img id="fires" src="https://static-00.iconduck.com/assets.00/fire-emoji-402x512-8ma95d17.png">
+        </h2>
+        </section>
+        
+        
+            <div class="card">
+
+                <div class="product-image product1"></div>
+                    <div class="inner-card">
+                        <div class="vendor">Food Square</div>
+
+                            <h1 class="header">Fried Noodles with Siomai</h1>
+
+                            <p class="content">
+                                This Hong Kong style fried noodles recipe is 
+                                amazingly flavorful. Crispy noodles with bean 
+                                sprouts topped with teriyaki sauce and siomai!
+                            </p>
+
+                            <div class="flex">
+                                <p class="main-price">₱50.00</p>
+                                <p class="old-price">₱75.00</p>
+                            </div>
+
+                        <button class="add">
+                            <p style="margin-left: 5px">Add to Cart</p>
+                        </button>
+                    </div>
+
+                    
+            </div>
+    
+
+            <div class="card">
+                <div class="product-image product1"></div>
+                    <div class="inner-card">
+                        <div class="vendor">Food Square</div>
+
+                            <h1 class="header">Fried Noodles with Siomai</h1>
+
+                            <p class="content">
+                                This Hong Kong style fried noodles recipe is 
+                                amazingly flavorful. Crispy noodles with bean 
+                                sprouts topped with teriyaki sauce and siomai!
+                            </p>
+
+                            <div class="flex">
+                                <p class="main-price">₱50.00</p>
+                                <p class="old-price">₱75.00</p>
+                            </div>
+
+                        <button class="add">
+                            <p style="margin-left: 5px">Add to Cart</p>
+                        </button>
+                    </div>
+            </div>
+
+
+            <div class="card">
+                <div class="product-image product1"></div>
+                    <div class="inner-card">
+                        <div class="vendor">Food Square</div>
+
+                            <h1 class="header">Fried Noodles with Siomai</h1>
+
+                            <p class="content">
+                                This Hong Kong style fried noodles recipe is 
+                                amazingly flavorful. Crispy noodles with bean 
+                                sprouts topped with teriyaki sauce and siomai!
+                            </p>
+
+                            <div class="flex">
+                                <p class="main-price">₱50.00</p>
+                                <p class="old-price">₱75.00</p>
+                            </div>
+
+                        <button class="add">
+                            <p style="margin-left: 5px">Add to Cart</p>
+                        </button>
+                    </div>
+            </div>
+
+            <div class="card">
+                <div class="product-image product1"></div>
+                    <div class="inner-card">
+                        <div class="vendor">Food Square</div>
+
+                            <h1 class="header">Fried Noodles with Siomai</h1>
+
+                            <p class="content">
+                                This Hong Kong style fried noodles recipe is 
+                                amazingly flavorful. Crispy noodles with bean 
+                                sprouts topped with teriyaki sauce and siomai!
+                            </p>
+
+                            <div class="flex">
+                                <p class="main-price">₱50.00</p>
+                                <p class="old-price">₱75.00</p>
+                            </div>
+
+                        <button class="add">
+                            <p style="margin-left: 5px">Add to Cart</p>
+                        </button>
+                    </div>
+            </div>
+
+            <div class="card">
+                <div class="product-image product1"></div>
+                    <div class="inner-card">
+                        <div class="vendor">Food Square</div>
+
+                            <h1 class="header">Fried Noodles with Siomai</h1>
+
+                            <p class="content">
+                                This Hong Kong style fried noodles recipe is 
+                                amazingly flavorful. Crispy noodles with bean 
+                                sprouts topped with teriyaki sauce and siomai!
+                            </p>
+
+                            <div class="flex">
+                                <p class="main-price">₱50.00</p>
+                                <p class="old-price">₱75.00</p>
+                            </div>
+
+                        <button class="add">
+                            <p style="margin-left: 5px">Add to Cart</p>
+                        </button>
+                    </div>
+            </div>
+
+            <div class="card">
+                <div class="product-image product1"></div>
+                    <div class="inner-card">
+                        <div class="vendor">Food Square</div>
+
+                            <h1 class="header">Fried Noodles with Siomai</h1>
+
+                            <p class="content">
+                                This Hong Kong style fried noodles recipe is 
+                                amazingly flavorful. Crispy noodles with bean 
+                                sprouts topped with teriyaki sauce and siomai!
+                            </p>
+
+                            <div class="flex">
+                                <p class="main-price">₱50.00</p>
+                                <p class="old-price">₱75.00</p>
+                            </div>
+
+                        <button class="add">
+                            <p style="margin-left: 5px">Add to Cart</p>
+                        </button>
+                    </div>
+            </div>
+
+        
+    </section>
+
+</body>
+</html>
